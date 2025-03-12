@@ -41,7 +41,7 @@ nav ul li a:hover {
 
 /* Hero Section */ 
 .hero-section {
-    background: url('images/018.PNG') no-repeat center center/cover;
+    background: url('images/cloth.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: center;

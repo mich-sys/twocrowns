@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
     const products = [
-        { name: "African Print Dress", price: 50, image: "images/009.jpg" },
-        { name: "Modern Ankara Gown", price: 70, image: "images/073.jpg" },
-        { name: "Casual Jumpsuit", price: 60, image: "images/009.jpg" },
-        { name: "Elegant Blazer Set", price: 90, image: "images/073.jpg" },
-        { name: "Kente Maxi Dress", price: 80, image: "images/073.jpg" },
-        { name: "Traditional Wrapper Set", price: 55, image: "images/073.jpg" },
-        { name: "Chiffon Boubou", price: 85, image: "images/009.jpg" },
-        { name: "Ankara Skirt & Blouse", price: 65, image: "images/009.jpg" },
-        { name: "Dashiki Shirt", price: 40, image: "images/073.jpg" },
-        { name: "African Beaded Kaftan", price: 95, image: "images/073.jpg" },
-        { name: "Kitenge Party Dress", price: 75, image: "images/009.jpg" }
+        { name: "Adire Lounge Set", price: 0, image: "images/logo (2).jpeg" },
+        { name: "Adire Lounge Set", price: 0, image: "images/logo (3).jpeg" },
+        { name: "Adire Lounge Set", price: 0, image: "images/logo (4).jpeg" },
+        { name: "Adire Lounge Set", price: 0, image: "images/logo (5).jpeg" },
+        // { name: "Kente Maxi Dress", price: 80, image: "images/073.jpg" },
+        // { name: "Traditional Wrapper Set", price: 55, image: "images/073.jpg" },
+        // { name: "Chiffon Boubou", price: 85, image: "images/009.jpg" },
+        // { name: "Ankara Skirt & Blouse", price: 65, image: "images/009.jpg" },
+        // { name: "Dashiki Shirt", price: 40, image: "images/073.jpg" },
+        // { name: "African Beaded Kaftan", price: 95, image: "images/073.jpg" },
+        // { name: "Kitenge Party Dress", price: 75, image: "images/009.jpg" }
     ];
 
     const productGrid = document.querySelector(".product-grid");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <p>$${product.price}</p>
-                <button class="buy-btn" data-product="${product.name}" data-price="${product.price}">Buy</button>
+                <button class="buy-btn" data-product="${product.name}" data-price="${product.price}">Sold Out</button>
             `;
             productGrid.appendChild(productCard);
         });
