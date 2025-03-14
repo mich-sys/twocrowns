@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 5%;
-    background-color: #8b5e83;
+    background-color: black;
     color: white;
 }
 
@@ -42,13 +42,13 @@ nav ul li a:hover {
 
 /* Hero Section */ 
 .hero-section {
-    background: url('images/cloth.jpg') no-repeat center center/cover;
+    background-color: beige;
     height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    /* color: white; */
     padding: 2rem;
 }
 
@@ -63,7 +63,7 @@ nav ul li a:hover {
 }
 
 .shop-now {
-    background-color: #d494a1;
+    background-color: #070002;
     border: none;
     padding: 12px 24px;
     font-size: 1.2rem;
@@ -159,7 +159,7 @@ nav ul li a:hover {
 
 .buy-btn {
     display: inline-block;
-    background-color: #d494a1;
+    background-color: #000000;
     color: white;
     text-decoration: none;
     padding: 12px 20px;
@@ -172,7 +172,7 @@ nav ul li a:hover {
 }
 
 .buy-btn:hover {
-    background-color: #b86f7a;
+    background-color: #eca1b4;
 }
 
 
@@ -180,7 +180,7 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #8b5e83;
+    background-color: #000000;
     color: white;
     margin-top: 2rem;
     font-size: 1.2rem;

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
             productCard.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
-                <p>$${product.price}</p>
+                
                 <button class="buy-btn" data-product="${product.name}" data-price="${product.price}">Sold Out</button>
             `;
             productGrid.appendChild(productCard);
@@ -59,3 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
    
 });
+
+
+/* <p>$${product.price}</p> */
