@@ -51,5 +51,29 @@
     <footer>
         <p>&copy; TwoCrowns Clothiers. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll(".product-card img");
+            const lightbox = document.createElement("div");
+            lightbox.classList.add("lightbox");
+            document.body.appendChild(lightbox);
+        
+            const lightboxImg = document.createElement("img");
+            lightbox.appendChild(lightboxImg);
+        
+            images.forEach(img => {
+                img.addEventListener("click", function() {
+                    lightboxImg.src = img.src;
+                    lightbox.style.display = "flex";
+                });
+            });
+        
+            lightbox.addEventListener("click", function() {
+                lightbox.style.display = "none";
+            });
+        });
+        </script>
+        
 </body>
 </html>
