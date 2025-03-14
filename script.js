@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const productName = e.target.dataset.product;
             const productPrice = e.target.dataset.price;
             const message = `Hello, I'm interested in buying: ${productName} for $${productPrice}.`;
-            const whatsappLink = `https://wa.me/2349151620684?text=${encodeURIComponent(message)}`;
+            const whatsappLink = `https://wa.me/447825308496?text=${encodeURIComponent(message)}`;
             window.location.href = whatsappLink;
         }
     });
