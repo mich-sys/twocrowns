@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asoke - TwoCrowns Clothiers</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">TwoCrowns Clothiers</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+   
+    
+    <!-- Other Products Section -->
+    <section class="other-products">
+        <h2>More Asoke Styles</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/1.JPG" alt="Asoke Variant 1">
+                <p>Asoke Classic - £50,000</p>
+                <a href="https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20buy%20Asoke%20Classic" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="images/2.JPG" alt="Asoke Variant 2">
+                <p>Asoke Royal - £65,000</p>
+                <a href="https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20buy%20Asoke%20Royal" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="images/3.JPG" alt="Asoke Variant 3">
+                <p>Asoke Prestige - £75,000</p>
+                <a href="https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20buy%20Asoke%20Prestige" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="images/4.JPG" alt="Asoke Variant 1">
+                <p>Asoke Classic - £50,000</p>
+                <a href="https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20buy%20Asoke%20Classic" class="buy-btn">Buy Now</a>
+            </div>
+            <div class="product-card">
+                <img src="images/5.JPG" alt="Asoke Variant 2">
+                <p>Asoke Royal - £65,000</p>
+                <a href="https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20buy%20Asoke%20Royal" class="buy-btn">Buy Now</a>
+            </div> 
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; TwoCrowns Clothiers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector(".carousel");
+            const items = document.querySelectorAll(".carousel-item");
+            let currentIndex = 0;
+        
+            function showSlide(index) {
+                const totalItems = items.length;
+                if (index >= totalItems) currentIndex = 0;
+                else if (index < 0) currentIndex = totalItems - 1;
+                else currentIndex = index;
+        
+                const offset = -currentIndex * 100;
+                carousel.style.transform = `translateX(${offset}%)`;
+            }
+        
+            setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 3000); // Auto-slide every 3 seconds
+        
+            // Fullscreen image feature
+            document.querySelectorAll(".carousel img, .product-card img").forEach(img => {
+                img.addEventListener("click", function () {
+                    openFullscreen(this.src);
+                });
+            });
+        
+            function openFullscreen(src) {
+                const overlay = document.createElement("div");
+                overlay.style.position = "fixed";
+                overlay.style.top = "0";
+                overlay.style.left = "0";
+                overlay.style.width = "100vw";
+                overlay.style.height = "100vh";
+                overlay.style.background = "rgba(0, 0, 0, 0.9)";
+                overlay.style.display = "flex";
+                overlay.style.justifyContent = "center";
+                overlay.style.alignItems = "center";
+                overlay.style.zIndex = "1000";
+        
+                const fullscreenImg = document.createElement("img");
+                fullscreenImg.src = src;
+                fullscreenImg.style.maxWidth = "90vw";
+                fullscreenImg.style.maxHeight = "90vh";
+                fullscreenImg.style.borderRadius = "10px";
+        
+                overlay.appendChild(fullscreenImg);
+                document.body.appendChild(overlay);
+        
+                // Close fullscreen when tapping anywhere
+                overlay.addEventListener("click", function () {
+                    document.body.removeChild(overlay);
+                });
+            }
+        });
+        </script>
+        
+</body>
+</html>
